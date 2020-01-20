@@ -83,7 +83,7 @@
             <th />
           </tr>
           <tr slot="tbody" let:item>
-            <Table_Item item={item} />
+            <Table_Item item={item} b_curr={false}/>
           </tr>
         </TableSort>
       </div>

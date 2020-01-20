@@ -2,17 +2,14 @@
   import { v_list } from "../stores.js";
   import { TableSort } from "svelte-tablesort";
 
+  import Table_Item from "../components/table_item.svelte";
+
   let v_curr;
 
   const unsubscribe = v_list.subscribe(value => {
     v_curr = value;
   });
 
-  function remove(item) {
-    let new_v_list = v_curr;
-    new_v_list = v_curr.filter(e => e !== item);
-    v_list.set(new_v_list);
-  }
 </script>
 
 <TableSort
@@ -28,14 +25,6 @@
     <th />
   </tr>
   <tr slot="tbody" let:item>
-    <td>{item.symptom}</td>
-    <td>{item.level}</td>
-    <td>{item.stealth}</td>
-    <td>{item.resistance}</td>
-    <td>{item.stagespeed}</td>
-    <td>{item.transmission}</td>
-    <td>
-      <button class="btn btn-primary" on:click={() => remove(item)}>Remove</button>
-    </td>
+    <Table_Item {item} b_curr={true} />
   </tr>
 </TableSort>

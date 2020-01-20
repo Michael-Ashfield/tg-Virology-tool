@@ -57,28 +57,28 @@
 
       switch (virus.level) {
         case 1:
-          chemical.push(chemicalList[0]);
+          check_unique(chemicalList[0]);
           break;
         case 2:
-          chemical.push(chemicalList[1]);
+          check_unique(chemicalList[1]);
           break;
         case 3:
-          chemical.push(chemicalList[2]);
+          check_unique(chemicalList[2]);          
           break;
         case 4:
-          chemical.push(chemicalList[3]);
+          check_unique(chemicalList[3]);
           break;
         case 5:
-          chemical.push(chemicalList[4]);
+          check_unique(chemicalList[4]);
           break;
         case 6:
-          chemical.push(chemicalList[5]);
+          check_unique(chemicalList[5]);          
           break;
         case 7:
-          chemical.push(chemicalList[6]);
+          check_unique(chemicalList[6]);
           break;
         case 8:
-          chemical.push(chemicalList[7]);
+          check_unique(chemicalList[7]);
           break;
       }
     });
@@ -128,6 +128,12 @@
     }
     if (tot_transmission >= 11) {
       infection = infectionList[0];
+    }
+  }
+
+  function check_unique(chem_item) {
+    if (!chemical.includes(chem_item)) {
+      chemical.push(chem_item);
     }
   }
 </script>
