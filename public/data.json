@@ -1,0 +1,624 @@
+[
+	{
+		"symptom": "Acute Respiratory Distress Syndrome",
+		"stealth": -2,
+		"resistance": 0,
+		"stagespeed": -1,
+		"transmission": -2,
+		"level": 7,
+		"description": "Causes heavy suffocation damage. Becomes even more lethal if the mob has more than 120 suffocation damage.",
+		"threshold": [
+			{
+				"stagespeed": 8,
+				"transmission": 8
+			}
+		]
+	},
+	{
+		"symptom": "Alopecia",
+		"stealth": 0,
+		"resistance": 1,
+		"stagespeed": 2,
+		"transmission": 2,
+		"level": 4,
+		"description": "Causes rapid hair loss.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Alkali perspiration",
+		"stealth": 2,
+		"resistance": -2,
+		"stagespeed": -2,
+		"transmission": -2,
+		"level": 7,
+		"description": "Causes the affected mob to burst into flames periodically, while also giving them small doses of Napalm and Chlorine Trifluoride. If wet when bursting into flames, the victims will also explode. Explosions can happen in stage 4 and stage 5.",
+		"threshold": [
+			{
+				"resistance": 9,
+				"stagespeed": 8,
+				"transmission": 8
+			}
+		]
+	},
+	{
+		"symptom": "Autophagocytosis Necrosis",
+		"stealth": -2,
+		"resistance": -2,
+		"stagespeed": 1,
+		"transmission": -2,
+		"level": 7,
+		"description": "Causes the mob's cells to decay rapidly, causing brute damage, constant bleeding and elevated hunger.",
+		"threshold": [
+			{
+				"stealth": 5,
+				"stagespeed": 7
+			}
+		]
+	},
+	{
+		"symptom": "Choking",
+		"stealth": -3,
+		"resistance": -2,
+		"stagespeed": -2,
+		"transmission": -2,
+		"level": 3,
+		"description": "Causes spikes of oxygen deprivation. Deals damage based on stage speed and stealth.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"stagespeed": 8
+			}
+		]
+	},
+	{
+		"symptom": "Coughing",
+		"stealth": -1,
+		"resistance": 3,
+		"stagespeed": 1,
+		"transmission": 2,
+		"level": 1,
+		"description": "The virus irritates the throat of the host, causing occasional coughing. Each cough will try to infect bystanders who are within 1 tile of the host with the virus.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"resistance": 11,
+				"resistance": 15,
+				"stagespeed": 6,
+				"transmission": 7
+			}
+		]
+	},
+	{
+		"symptom": "Confusion",
+		"stealth": 1,
+		"resistance": -1,
+		"stagespeed": -3,
+		"transmission": 0,
+		"level": 4,
+		"description": "Makes the affected mob be confused for short periods of time, making them walk in random directions.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"resistance": 6,
+				"transmission": 6
+			}
+		]
+	},
+	{
+		"symptom": "Deafness",
+		"stealth": -1,
+		"resistance": -2,
+		"stagespeed": -1,
+		"transmission": -3,
+		"level": 4,
+		"description": "Causes intermittent loss of hearing.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"resistance": 9
+			}
+		]
+	},
+	{
+		"symptom": "Disfiguration",
+		"stealth": 2,
+		"resistance": 0,
+		"stagespeed": 3,
+		"transmission": 1,
+		"level": 5,
+		"description": "Causes the host's face to crumble and cave in, disfiguring the host to appear as 'unknown' to others until cured.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Dizziness",
+		"stealth": 0,
+		"resistance": -2,
+		"stagespeed": -3,
+		"transmission": -1,
+		"level": 4,
+		"description": "Shakes the affected mob's screen.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"transmission": 6
+			}
+		]
+	},
+	{
+		"symptom": "Dormant DNA activator",
+		"stealth": -2,
+		"resistance": -3,
+		"stagespeed": 0,
+		"transmission": -3,
+		"level": 6,
+		"description": "The virus bonds with the DNA of the host, activating random dormant mutations within their DNA. When the virus is cured, the host's genetic alterations are undone.",
+		"threshold": [
+			{
+				"stealth": 5,
+				"resistance": 8,
+				"resistance": 14,
+				"stagespeed": 10
+			}
+		]
+	},
+	{
+		"symptom": "Eternal Youth",
+		"stealth": 3,
+		"resistance": 4,
+		"stagespeed": 4,
+		"transmission": -4,
+		"level": 5,
+		"description": "Makes you never physically older than young adulthood and prevents death by old age. Should be used for buffing your disease.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Facial Hypertrichosis",
+		"stealth": 0,
+		"resistance": 3,
+		"stagespeed": 2,
+		"transmission": 1,
+		"level": 4,
+		"description": "Makes you grow a massive beard, regardless of gender.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Fever",
+		"stealth": 0,
+		"resistance": 3,
+		"stagespeed": 3,
+		"transmission": 2,
+		"level": 2,
+		"description": "Heats up your body. Will not reach damaging levels of heat unless resistance thresholds are met.",
+		"threshold": [
+			{
+				"resistance": 5,
+				"resistance": 10
+			}
+		]
+	},
+	{
+		"symptom": "Hallucigen",
+		"stealth": -1,
+		"resistance": -3,
+		"stagespeed": -2,
+		"transmission": -1,
+		"level": 5,
+		"description": "Makes the affected mob have hallucinations for short periods of time. Available in Virus Crates.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"stagespeed": 7
+			}
+		]
+	},
+	{
+		"symptom": "Headache",
+		"stealth": -1,
+		"resistance": 4,
+		"stagespeed": 2,
+		"transmission": 0,
+		"level": 1,
+		"description": "Displays an annoying message! Should be used for buffing your disease.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"stagespeed": 6,
+				"stagespeed": 9
+			}
+		]
+	},
+	{
+		"symptom": "Inorganic Biology",
+		"stealth": -1,
+		"resistance": 4,
+		"stagespeed": -2,
+		"transmission": 3,
+		"level": 5,
+		"description": "The virus becomes able to affect inorganic species, such as Golems or Plasmamen.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Hyphema",
+		"stealth": -1,
+		"resistance": -4,
+		"stagespeed": -4,
+		"transmission": -3,
+		"level": 5,
+		"description": "Inflicts eye damage over time. Causes blindness if left unchecked.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"resistance": 12
+			}
+		]
+	},
+	{
+		"symptom": "Itching",
+		"stealth": 0,
+		"resistance": 3,
+		"stagespeed": 3,
+		"transmission": 1,
+		"level": 1,
+		"description": "Displays an annoying message. Should be used for buffing your disease. Can do slight brute damage if the stage speed threshold is met.",
+		"threshold": [
+			{
+				"stagespeed": 7,
+				"transmission": 6
+			}
+		]
+	},
+	{
+		"symptom": "Metabolic Boost",
+		"stealth": -1,
+		"resistance": -2,
+		"stagespeed": 2,
+		"transmission": 1,
+		"level": 7,
+		"description": "Doubles the host's metabolism speed, making them process chems much faster than normal, but also increasing their hunger tenfold.",
+		"threshold": [
+			{
+				"stealth": 3,
+				"stagespeed": 10
+			}
+		]
+	},
+	{
+		"symptom": "Mind Restoration",
+		"stealth": -1,
+		"resistance": -2,
+		"stagespeed": 1,
+		"transmission": -3,
+		"level": 5,
+		"description": "The virus strengthens the bonds between neurons, reducing the duration of any ailment of the mind. Heals brain damage, and can cure mild and heavy traumas if upgraded.",
+		"threshold": [
+			{
+				"resistance": 6,
+				"resistance": 9,
+				"transmission": 8
+			}
+		]
+	},
+	{
+		"symptom": "Nano-symbiosis",
+		"stealth": 0,
+		"resistance": 2,
+		"stagespeed": 2,
+		"transmission": -1,
+		"level": 7,
+		"description": "The virus reacts to nanites in the host's bloodstream by enhancing their replication cycle.",
+		"threshold": [
+			{
+				"stagespeed": 7,
+				"transmission": 5
+			}
+		]
+	},
+	{
+		"symptom": "Narcolepsy",
+		"stealth": -1,
+		"resistance": -2,
+		"stagespeed": -3,
+		"transmission": 0,
+		"level": 6,
+		"description": "Makes the host drowsy and prone to falling asleep randomly.",
+		"threshold": [
+			{
+				"stagespeed": 4,
+				"transmission": 10
+			}
+		]
+	},
+	{
+		"symptom": "Necrotic Metabolism",
+		"stealth": 2,
+		"resistance": -2,
+		"stagespeed": 1,
+		"transmission": 0,
+		"level": 5,
+		"description": "The virus becomes able to affect corpses and undead races, instead of lying dormant.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Necrotizing Fasciitis",
+		"stealth": -3,
+		"resistance": -4,
+		"stagespeed": 0,
+		"transmission": -3,
+		"level": 6,
+		"description": "Causes brute damage over time. Fatal if left untreated.",
+		"threshold": [
+			{
+				"resistance": 7,
+				"transmission": 8
+			}
+		]
+	},
+	{
+		"symptom": "Nocturnal Regeneration",
+		"stealth": 2,
+		"resistance": -1,
+		"stagespeed": -2,
+		"transmission": -1,
+		"level": 6,
+		"description": "Heals brute and burn damage if the host is not currently exposed to light. Heals brute damage more quickly than burn damage.",
+		"threshold": [
+			{
+				"stagespeed": 8
+			}
+		]
+	},
+	{
+		"symptom": "Plasma Fixation",
+		"stealth": 0,
+		"resistance": 3,
+		"stagespeed": -2,
+		"transmission": -2,
+		"level": 8,
+		"description": "The host absorbs plasma in the air and in their bloodstream, using it to stabilize their temperature and heal brute, burn, and toxin damage.",
+		"threshold": [
+			{
+				"stagespeed": 7,
+				"transmission": 6
+			}
+		]
+	},
+	{
+		"symptom": "Polyvitiligo",
+		"stealth": -1,
+		"resistance": 3,
+		"stagespeed": 1,
+		"transmission": 2,
+		"level": 5,
+		"description": "The virus replaces the melanin in the skin with reactive pigment, by adding random crayon powder to the host.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Radioactive Resonance",
+		"stealth": -1,
+		"resistance": -2,
+		"stagespeed": 0,
+		"transmission": -3,
+		"level": 6,
+		"description": "Heals brute, burn, and toxin damage while the host is irradiated. Higher radiation levels increase the healing speed.",
+		"threshold": [
+			{
+				"resistance": 7,
+				"transmission": 6
+			}
+		]
+	},
+	{
+		"symptom": "Regenerative Coma",
+		"stealth": 0,
+		"resistance": 2,
+		"stagespeed": -3,
+		"transmission": -2,
+		"level": 8,
+		"description": "Causes the host to fall into a death-like coma when heavily damaged, then rapidly cures their wounds.",
+		"threshold": [
+			{
+				"stealth": 2,
+				"resistance": 4,
+				"stagespeed": 7
+			}
+		]
+	},
+	{
+		"symptom": "Self-Respiration",
+		"stealth": 1,
+		"resistance": -3,
+		"stagespeed": -3,
+		"transmission": -4,
+		"level": 6,
+		"description": "Quickly heals oxygen damage, negating the need for air.",
+		"threshold": [
+			{
+				"resistance": 8
+			}
+		]
+	},
+	{
+		"symptom": "Sensory Restoration",
+		"stealth": 0,
+		"resistance": 1,
+		"stagespeed": -2,
+		"transmission": 2,
+		"level": 4,
+		"description": "Restores mob's senses by fixing eye and ear damage.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Shivering",
+		"stealth": 0,
+		"resistance": 2,
+		"stagespeed": 3,
+		"transmission": 2,
+		"level": 2,
+		"description": "Cools down your body. Won't reach damaging levels unless thresholds are met.",
+		"threshold": [
+			{
+				"stagespeed": 5,
+				"stagespeed": 10
+			}
+		]
+	},
+	{
+		"symptom": "Silicolysis",
+		"stealth": 0,
+		"resistance": 4,
+		"stagespeed": -1,
+		"transmission": 1,
+		"level": 7,
+		"description": "The virus reacts to nanites in the host's bloodstream by attacking and consuming them.",
+		"threshold": [
+			{
+				"resistance": 7,
+				"stagespeed": 5
+			}
+		]
+	},
+	{
+		"symptom": "Sneezing",
+		"stealth": -2,
+		"resistance": 3,
+		"stagespeed": 0,
+		"transmission": 4,
+		"level": 1,
+		"description": "The virus causes irritation of the nasal cavity, making the host sneeze occasionally. Sneezes from this symptom will spread the virus in a 4 meter cone in front of the host.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"stagespeed": 17,
+				"transmission": 9
+			}
+		]
+	},
+	{
+		"symptom": "Spontaneous Combustion",
+		"stealth": -1,
+		"resistance": -4,
+		"stagespeed": -3,
+		"transmission": -4,
+		"level": 6,
+		"description": "Sets your body on fire periodically.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"stagespeed": 4,
+				"stagespeed": 8,
+				"transmission": 8
+			}
+		]
+	},
+	{
+		"symptom": "Starlight Condensation",
+		"stealth": -1,
+		"resistance": -2,
+		"stagespeed": 0,
+		"transmission": 1,
+		"level": 6,
+		"description": "Heals brute, burn, and toxin damage while exposed to starlight. Heals toxin more efficiently. Actually being in space intensifies the effect.",
+		"threshold": [
+			{
+				"stagespeed": 6,
+				"transmission": 6
+			}
+		]
+	},
+	{
+		"symptom": "Tissue Hydration",
+		"stealth": 0,
+		"resistance": -1,
+		"stagespeed": 0,
+		"transmission": -1,
+		"level": 6,
+		"description": "Heals brute and burn damage if the host drank water recently, or if they're wet. Heals burn damage more efficiently.",
+		"threshold": [
+			{
+				"resistance": 5,
+				"stagespeed": 7
+			}
+		]
+	},
+	{
+		"symptom": "Toxolysis",
+		"stealth": 0,
+		"resistance": -2,
+		"stagespeed": -2,
+		"transmission": -2,
+		"level": 7,
+		"description": "Purges all chemicals at a fast rate from the bloodstream",
+		"threshold": [
+			{
+				"resistance": 7,
+				"stagespeed": 6
+			}
+		]
+	},
+	{
+		"symptom": "Viral Evolutionary Acceleration",
+		"stealth": -2,
+		"resistance": -3,
+		"stagespeed": 5,
+		"transmission": 3,
+		"level": 3,
+		"description": "Massively buffs the evolutionary cycle of viruses, causing it to be faster acting, better at infecting, but more easily detected and cured.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Viral Self-Adaptation",
+		"stealth": 3,
+		"resistance": 5,
+		"stagespeed": -3,
+		"transmission": 0,
+		"level": 3,
+		"description": "Massively buffs the adaptation of viruses, causing it to be stealthier, harder to cure but slower acting.",
+		"threshold": [{}]
+	},
+	{
+		"symptom": "Voice Change",
+		"stealth": -1,
+		"resistance": -2,
+		"stagespeed": -2,
+		"transmission": 2,
+		"level": 6,
+		"description": "Changes the voice of the affected mob. Causing confusion in communication. Available in Virus Crates.",
+		"threshold": [
+			{
+				"stealth": 3,
+				"stagespeed": 7,
+				"transmission": 14
+			}
+		]
+	},
+	{
+		"symptom": "Vomiting",
+		"stealth": -2,
+		"resistance": -1,
+		"stagespeed": -1,
+		"transmission": 2,
+		"level": 3,
+		"description": "Forces the affected mob to vomit! Makes the affected mob lose nutrition and heal toxin damage.",
+		"threshold": [
+			{
+				"stealth": 4,
+				"resistance": 7,
+				"transmission": 7
+			}
+		]
+	},
+	{
+		"symptom": "Weight Loss",
+		"stealth": -2,
+		"resistance": 2,
+		"stagespeed": -2,
+		"transmission": -2,
+		"level": 3,
+		"description": "The virus mutates the host's metabolism, making it almost unable to gain nutrition from food.",
+		"threshold": [
+			{
+				"stealth": 4
+			}
+		]
+	}
+]
