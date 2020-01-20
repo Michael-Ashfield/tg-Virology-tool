@@ -1,7 +1,6 @@
 # Virology app
 This is a tool designed for ~~power gamers~~ developers for tg to rapidly test changes to virus stats and the effects of adding new viruses. 
 This tool is still in development, but is in a usable state, more features are planned such as:
-* Full descriptions for each virus
 * Thresholds being displayed for each virus/ when they are achieved
 * Saving completed viruses locally
 

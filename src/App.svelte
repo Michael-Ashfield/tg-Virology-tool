@@ -1,8 +1,10 @@
 <script>
   import { v_list } from "./stores.js";
   import { TableSort } from "svelte-tablesort";
+  
   import Curr_list from "./components/curr_list.svelte";
   import Totals from "./components/totals.svelte";
+  import Table_Item from "./components/table_item.svelte";
 
   let data = [];
   let v_curr = [];
@@ -28,13 +30,6 @@
     data = JSON.parse(text);
   });
 
-  function add(virus) {
-    if (!v_curr.includes(virus)) {
-      if (v_curr.length < 6) {
-        v_list.update(n => n.concat(virus));
-      }
-    }
-  }
 </script>
 
 <style>
@@ -88,19 +83,7 @@
             <th />
           </tr>
           <tr slot="tbody" let:item>
-            <td>{item.symptom}</td>
-            <td>{item.level}</td>
-            <td>{item.stealth}</td>
-            <td>{item.resistance}</td>
-            <td>{item.stagespeed}</td>
-            <td>{item.transmission}</td>
-            <td>
-              <button
-                class="btn btn-primary {v_curr.includes(item) ? 'disabled' : ''}"
-                on:click={() => add(item)}>
-                Add
-              </button>
-            </td>
+            <Table_Item item={item} />
           </tr>
         </TableSort>
       </div>
