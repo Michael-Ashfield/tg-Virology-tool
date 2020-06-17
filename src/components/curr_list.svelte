@@ -1,7 +1,7 @@
 <script>
   import { v_list } from "../stores.js";
   import { TableSort } from "svelte-tablesort";
-
+  import Save from "./save.svelte";
   import Table_Item from "../components/table_item.svelte";
 
   let v_curr;
@@ -9,7 +9,6 @@
   const unsubscribe = v_list.subscribe(value => {
     v_curr = value;
   });
-
 </script>
 
 <TableSort
@@ -26,5 +25,10 @@
   </tr>
   <tr slot="tbody" let:item>
     <Table_Item {item} b_curr={true} />
+  </tr>
+  <tr slot="tfoot">
+    <td colspan="7">
+      <Save />
+    </td>
   </tr>
 </TableSort>

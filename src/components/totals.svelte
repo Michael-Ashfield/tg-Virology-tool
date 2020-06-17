@@ -1,5 +1,6 @@
 <script>
-  import { v_list } from "../stores.js";
+  import { v_list, v_total } from "../stores.js";
+  import Chart from "./chart.svelte";
 
   let v_curr;
 
@@ -63,7 +64,7 @@
           check_unique(chemicalList[1]);
           break;
         case 3:
-          check_unique(chemicalList[2]);          
+          check_unique(chemicalList[2]);
           break;
         case 4:
           check_unique(chemicalList[3]);
@@ -72,7 +73,7 @@
           check_unique(chemicalList[4]);
           break;
         case 6:
-          check_unique(chemicalList[5]);          
+          check_unique(chemicalList[5]);
           break;
         case 7:
           check_unique(chemicalList[6]);
@@ -129,6 +130,13 @@
     if (tot_transmission >= 11) {
       infection = infectionList[0];
     }
+
+    v_total.set({
+      stealth: tot_stealth,
+      resistance: tot_resistance,
+      stage_speed: tot_stagespeed,
+      transmission: tot_transmission
+    });
   }
 
   function check_unique(chem_item) {
@@ -140,6 +148,11 @@
 
 <div class="totals">
   <table class="table">
+    <tr>
+      <td colspan="2">
+        <Chart />
+      </td>
+    </tr>
     <tr>
       <td>
         <b>Stealth</b>
