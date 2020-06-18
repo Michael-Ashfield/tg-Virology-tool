@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import {
     Button,
     Modal,
@@ -20,18 +19,6 @@
   let diseaseName = "";
   let inputElement;
   let nameNull = false;
-
-  onMount(() => {
-    const ctx = inputElement;
-    /*
-    ctx.onkeydown = function(event) {
-      event.preventDefault();
-      if (event.keyCode == 13) {
-        alert("5");
-      }
-    };
-    */
-  });
 
   const toggle = () => {
     open = !open;
@@ -96,7 +83,6 @@
         </FormGroup>
         <Button type="submit" color="primary" on:click={saveTest}>Save</Button>
         <Button color="secondary" on:click={toggle}>Cancel</Button>
-
       </form>
     </ModalBody>
     <ModalFooter />

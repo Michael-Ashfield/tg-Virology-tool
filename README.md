@@ -4,6 +4,20 @@ This tool is still in development, but is in a usable state, more features are p
 * Thresholds being displayed for each virus/ when they are achieved
 * Saving completed viruses locally
 
+To run:
+Open the root in terminal and enter 
+```
+npm install
+```
+After that is done, enter:
+```
+npm run dev
+```
+You will then find it running at http://localhost:5000/
+
+Why cant you just open public/index.html ?
+Because modern browsers have security protocals which prevent them from opening local resources.
+
 All the data for the viruses can be found in public/data.json.
 To run, download and open public/index.html
 

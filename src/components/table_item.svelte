@@ -5,6 +5,14 @@
 
   export let item;
   export let b_curr; // Boolean_Current, true if displayed in the current items list
+  export let sorted = undefined;
+
+  $: {
+    // Basically the table sort messes up the element order so this forces a re-render when the sort changes
+    if (sorted) {
+      remove(); // Removes nothing and forced a re-render
+    }
+  }
 
   let v_curr = [];
   let isOpen = false;
@@ -44,9 +52,11 @@
 
   function remove(virus) {
     let new_v_list = v_curr;
-    new_v_list = _.filter(v_curr, e => {
-      return !_.isMatch(e, virus); // isMatch used because of objects acting odd
-    });
+    if (virus) {
+      new_v_list = _.filter(v_curr, e => {
+        return !_.isMatch(e, virus); // isMatch used because of objects acting odd
+      });
+    }
     v_list.set(new_v_list);
   }
 </script>
@@ -73,7 +83,9 @@
       Remove
     </button>
   {:else}
-    <button class="btn btn-primary {disabledAdd}" on:click={() => add(item)}>
+    <button
+      class="btn btn-primary {disabledAdd}"
+      on:click={() => add(item)}>
       Add
     </button>
   {/if}
