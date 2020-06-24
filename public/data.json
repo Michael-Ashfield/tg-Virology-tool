@@ -9,8 +9,14 @@
 		"description": "Causes heavy suffocation damage. Becomes even more lethal if the mob has more than 120 suffocation damage.",
 		"threshold": [
 			{
-				"stagespeed": 8,
-				"transmission": 8
+				"type": "Stage speed",
+				"value": 8,
+				"desc": "Additionally synthesizes pancuronium and sodium thiopental inside the host"
+			},
+			{
+				"type": "Transmission",
+				"value": 8,
+				"desc": "Doubles the damage done by the symptom"
 			}
 		]
 	},
@@ -34,9 +40,20 @@
 		"description": "Causes the affected mob to burst into flames periodically, while also giving them small doses of Napalm and Chlorine Trifluoride. If wet when bursting into flames, the victims will also explode. Explosions can happen in stage 4 and stage 5.",
 		"threshold": [
 			{
-				"resistance": 9,
-				"stagespeed": 8,
-				"transmission": 8
+				"type": "Resistance",
+				"value": 9,
+				"desc": "Doubles the intensity of the immolation effect, but reduces the frequency of all of this symptom's effects."
+			},
+
+			{
+				"type": "Stage speed",
+				"value": 8,
+				"desc": "Increases explosion radius and explosion damage to the host when the host is wet."
+			},
+			{
+				"type": "Transmission",
+				"value": 8,
+				"desc": "Additionally synthesizes chlorine trifluoride and napalm inside the host. More chemicals are synthesized if the resistance 9 threshold has also been met."
 			}
 		]
 	},
@@ -50,8 +67,14 @@
 		"description": "Causes the mob's cells to decay rapidly, causing brute damage, constant bleeding and elevated hunger.",
 		"threshold": [
 			{
-				"stealth": 5,
-				"stagespeed": 7
+				"type": "Stealth",
+				"value": 5,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Stage speed",
+				"value": 7,
+				"desc": "Synthesizes Heparin and Lipolicide inside the host, causing increased bleeding and hunger"
 			}
 		]
 	},
@@ -65,8 +88,14 @@
 		"description": "Causes spikes of oxygen deprivation. Deals damage based on stage speed and stealth.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"stagespeed": 8
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Stage speed",
+				"value": 8,
+				"desc": "Increases choking frequency"
 			}
 		]
 	},
@@ -80,11 +109,29 @@
 		"description": "The virus irritates the throat of the host, causing occasional coughing. Each cough will try to infect bystanders who are within 1 tile of the host with the virus.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"resistance": 11,
-				"resistance": 15,
-				"stagespeed": 6,
-				"transmission": 7
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Resistance",
+				"value": 11,
+				"desc": "The host will drop small items when coughing."
+			},
+			{
+				"type": "Resistance",
+				"value": 15,
+				"desc": "Occasionally causes coughing fits that stun the host. The extra coughs do not spread the virus."
+			},
+			{
+				"type": "Stage speed",
+				"value": 6,
+				"desc": "Increases cough frequency"
+			},
+			{
+				"type": "Transmission",
+				"value": 7,
+				"desc": "Coughing will now infect bystanders up to 2 tiles away."
 			}
 		]
 	},
@@ -98,9 +145,19 @@
 		"description": "Makes the affected mob be confused for short periods of time, making them walk in random directions.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"resistance": 6,
-				"transmission": 6
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Resistance",
+				"value": 6,
+				"desc": "Causes brain damage over time"
+			},
+			{
+				"type": "Transmission",
+				"value": 6,
+				"desc": "Increases confusion duration and strength"
 			}
 		]
 	},
@@ -114,8 +171,14 @@
 		"description": "Causes intermittent loss of hearing.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"resistance": 9
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Resistance",
+				"value": 9,
+				"desc": "Causes permanent deafness, instead of intermittent"
 			}
 		]
 	},
@@ -139,8 +202,14 @@
 		"description": "Shakes the affected mob's screen.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"transmission": 6
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Transmission",
+				"value": 6,
+				"desc": "Also causes druggy vision"
 			}
 		]
 	},
@@ -154,10 +223,24 @@
 		"description": "The virus bonds with the DNA of the host, activating random dormant mutations within their DNA. When the virus is cured, the host's genetic alterations are undone.",
 		"threshold": [
 			{
-				"stealth": 5,
-				"resistance": 8,
-				"resistance": 14,
-				"stagespeed": 10
+				"type": "Stealth",
+				"value": 5,
+				"desc": "Only activates negative mutations in hosts."
+			},
+			{
+				"type": "Resistance",
+				"value": 8,
+				"desc": "The negative and mildly negative mutations caused by the virus are mutadone-proof (but will still be undone when the virus is cured if the resistance 14 threshold is not met)."
+			},
+			{
+				"type": "Resistance",
+				"value": 14,
+				"desc": "The host's genetic alterations are not undone when the virus is cured."
+			},
+			{
+				"type": "Stage speed",
+				"value": 10,
+				"desc": "The virus activates dormant mutations at a much faster rate."
 			}
 		]
 	},
@@ -191,8 +274,14 @@
 		"description": "Heats up your body. Will not reach damaging levels of heat unless resistance thresholds are met.",
 		"threshold": [
 			{
-				"resistance": 5,
-				"resistance": 10
+				"type": "Resistance",
+				"value": 5,
+				"desc": "Increases fever intensity, fever can overheat and harm the host"
+			},
+			{
+				"type": "Resistance",
+				"value": 10,
+				"desc": "Further increases fever intensity"
 			}
 		]
 	},
@@ -206,8 +295,14 @@
 		"description": "Makes the affected mob have hallucinations for short periods of time. Available in Virus Crates.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"stagespeed": 7
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The virus mimics positive symptoms"
+			},
+			{
+				"type": "Stage speed",
+				"value": 7,
+				"desc": "Increases the amount of hallucinations"
 			}
 		]
 	},
@@ -221,9 +316,19 @@
 		"description": "Displays an annoying message! Should be used for buffing your disease.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"stagespeed": 6,
-				"stagespeed": 9
+				"type": "Stealth",
+				"value": 4,
+				"desc": "Reduces headache frequency until later stages"
+			},
+			{
+				"type": "Stage speed",
+				"value": 6,
+				"desc": "Headaches will cause severe pain, that weakens the host"
+			},
+			{
+				"type": "Stage speed",
+				"value": 9,
+				"desc": "Headaches become less frequent but far more intense, preventing any action from the host"
 			}
 		]
 	},
@@ -247,8 +352,14 @@
 		"description": "Inflicts eye damage over time. Causes blindness if left unchecked.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"resistance": 12
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Resistance",
+				"value": 12,
+				"desc": "Weakens extraocular muscles, eventually leading to complete detachment of the eyes"
 			}
 		]
 	},
@@ -262,8 +373,14 @@
 		"description": "Displays an annoying message. Should be used for buffing your disease. Can do slight brute damage if the stage speed threshold is met.",
 		"threshold": [
 			{
-				"stagespeed": 7,
-				"transmission": 6
+				"type": "Stage speed",
+				"value": 7,
+				"desc": "The host will scrath itself when itching, causing superficial damage"
+			},
+			{
+				"type": "Transmission",
+				"value": 6,
+				"desc": "Increases frequency of itching"
 			}
 		]
 	},
@@ -277,8 +394,14 @@
 		"description": "Doubles the host's metabolism speed, making them process chems much faster than normal, but also increasing their hunger tenfold.",
 		"threshold": [
 			{
-				"stealth": 3,
-				"stagespeed": 10
+				"type": "Stealth",
+				"value": 3,
+				"desc": "Reduces hunger rate"
+			},
+			{
+				"type": "Stage speed",
+				"value": 10,
+				"desc": "Chemical metabolization is tripled instead of doubled"
 			}
 		]
 	},
@@ -292,9 +415,19 @@
 		"description": "The virus strengthens the bonds between neurons, reducing the duration of any ailment of the mind. Heals brain damage, and can cure mild and heavy traumas if upgraded.",
 		"threshold": [
 			{
-				"resistance": 6,
-				"resistance": 9,
-				"transmission": 8
+				"type": "Resistance",
+				"value": 6,
+				"desc": "Heals minor brain traumas"
+			},
+			{
+				"type": "Resistance",
+				"value": 9,
+				"desc": "Heals severe brain traumas"
+			},
+			{
+				"type": "Transmission",
+				"value": 8,
+				"desc": "Purges alcohol in the bloodstream"
 			}
 		]
 	},
@@ -308,8 +441,14 @@
 		"description": "The virus reacts to nanites in the host's bloodstream by enhancing their replication cycle.",
 		"threshold": [
 			{
-				"stagespeed": 7,
-				"transmission": 5
+				"type": "Stage speed",
+				"value": 7,
+				"desc": "Increases the replication boost"
+			},
+			{
+				"type": "Transmission",
+				"value": 5,
+				"desc": "Increases the virus' growth rate while nanites are present"
 			}
 		]
 	},
@@ -323,8 +462,14 @@
 		"description": "Makes the host drowsy and prone to falling asleep randomly.",
 		"threshold": [
 			{
-				"stagespeed": 4,
-				"transmission": 10
+				"type": "Stage speed",
+				"value": 4,
+				"desc": "Causes narcolepsy more often, increasing the chance of the host falling asleep"
+			},
+			{
+				"type": "Transmission",
+				"value": 10,
+				"desc": "Causes the host to periodically emit a yawn that spreads the virus in a manner similar to that of a sneeze"
 			}
 		]
 	},
@@ -348,8 +493,14 @@
 		"description": "Causes brute damage over time. Fatal if left untreated.",
 		"threshold": [
 			{
-				"resistance": 7,
-				"transmission": 8
+				"type": "Resistance",
+				"value": 7,
+				"desc": "Host will bleed profusely during necrosis"
+			},
+			{
+				"type": "Transmission",
+				"value": 8,
+				"desc": "Also causes stamina damage (2x as much as the brute damage)"
 			}
 		]
 	},
@@ -363,7 +514,9 @@
 		"description": "Heals brute and burn damage if the host is not currently exposed to light. Heals brute damage more quickly than burn damage.",
 		"threshold": [
 			{
-				"stagespeed": 8
+				"type": "Stage speed",
+				"value": 8,
+				"desc": "Doubles healing speed"
 			}
 		]
 	},
@@ -377,8 +530,14 @@
 		"description": "The host absorbs plasma in the air and in their bloodstream, using it to stabilize their temperature and heal brute, burn, and toxin damage.",
 		"threshold": [
 			{
-				"stagespeed": 7,
-				"transmission": 6
+				"type": "Stage speed",
+				"value": 7,
+				"desc": "Increases healing speed"
+			},
+			{
+				"type": "Transmission",
+				"value": 6,
+				"desc": "Increases temperature adjustment rate"
 			}
 		]
 	},
@@ -402,8 +561,14 @@
 		"description": "Heals brute, burn, and toxin damage while the host is irradiated. Higher radiation levels increase the healing speed.",
 		"threshold": [
 			{
-				"resistance": 7,
-				"transmission": 6
+				"type": "Resistance",
+				"value": 7,
+				"desc": "Increases healing speed"
+			},
+			{
+				"type": "Transmission",
+				"value": 6,
+				"desc": "Additionally heals cellular damage"
 			}
 		]
 	},
@@ -417,9 +582,19 @@
 		"description": "Causes the host to fall into a death-like coma when heavily damaged, then rapidly cures their wounds.",
 		"threshold": [
 			{
-				"stealth": 2,
-				"resistance": 4,
-				"stagespeed": 7
+				"type": "Stealth",
+				"value": 2,
+				"desc": "Host appears to die when falling into a coma"
+			},
+			{
+				"type": "Resistance",
+				"value": 4,
+				"desc": "The virus also stabilizes the host while they are in critical condition"
+			},
+			{
+				"type": "Stage speed",
+				"value": 7,
+				"desc": "Increases healing speed"
 			}
 		]
 	},
@@ -433,7 +608,9 @@
 		"description": "Quickly heals oxygen damage, negating the need for air.",
 		"threshold": [
 			{
-				"resistance": 8
+				"type": "Resistance",
+				"value": 8,
+				"desc": "Additionally regenerates lost blood"
 			}
 		]
 	},
@@ -457,8 +634,14 @@
 		"description": "Cools down your body. Won't reach damaging levels unless thresholds are met.",
 		"threshold": [
 			{
-				"stagespeed": 5,
-				"stagespeed": 10
+				"type": "Stage speed",
+				"value": 5,
+				"desc": "Increases cooling speed; the host can fall below safe temperature levels"
+			},
+			{
+				"type": "Stage speed",
+				"value": 10,
+				"desc": "Further increases cooling speed"
 			}
 		]
 	},
@@ -472,8 +655,14 @@
 		"description": "The virus reacts to nanites in the host's bloodstream by attacking and consuming them.",
 		"threshold": [
 			{
-				"resistance": 7,
-				"stagespeed": 5
+				"type": "Resistance",
+				"value": 7,
+				"desc": "Severely increases the rate at which the nanites are destroyed"
+			},
+			{
+				"type": "Stage speed",
+				"value": 5,
+				"desc": "Increases the virus' growth rate while nanites are present"
 			}
 		]
 	},
@@ -487,9 +676,19 @@
 		"description": "The virus causes irritation of the nasal cavity, making the host sneeze occasionally. Sneezes from this symptom will spread the virus in a 4 meter cone in front of the host.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"stagespeed": 17,
-				"transmission": 9
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Stage speed",
+				"value": 17,
+				"desc": "The force of each sneeze catapults the host backwards, potentially stunning and lightly damaging them if they hit a wall or another person mid-flight"
+			},
+			{
+				"type": "Transmission",
+				"value": 9,
+				"desc": "Increases sneezing range, spreading the virus over 6 meter cone instead of over a 4 meter cone"
 			}
 		]
 	},
@@ -503,10 +702,24 @@
 		"description": "Sets your body on fire periodically.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"stagespeed": 4,
-				"stagespeed": 8,
-				"transmission": 8
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Stage speed",
+				"value": 4,
+				"desc": "Increases the intensity of the flames"
+			},
+			{
+				"type": "Stage speed",
+				"value": 8,
+				"desc": "Further increases flame intensity"
+			},
+			{
+				"type": "Transmission",
+				"value": 8,
+				"desc": "Host will spread the virus through skin flakes when bursting into flame"
 			}
 		]
 	},
@@ -520,8 +733,14 @@
 		"description": "Heals brute, burn, and toxin damage while exposed to starlight. Heals toxin more efficiently. Actually being in space intensifies the effect.",
 		"threshold": [
 			{
-				"stagespeed": 6,
-				"transmission": 6
+				"type": "Stage speed",
+				"value": 6,
+				"desc": "Increases healing speed"
+			},
+			{
+				"type": "Transmission",
+				"value": 6,
+				"desc": "Removes penalty for only being close to space"
 			}
 		]
 	},
@@ -535,8 +754,14 @@
 		"description": "Heals brute and burn damage if the host drank water recently, or if they're wet. Heals burn damage more efficiently.",
 		"threshold": [
 			{
-				"resistance": 5,
-				"stagespeed": 7
+				"type": "Resistance",
+				"value": 5,
+				"desc": "Water is consumed at a much slower rate"
+			},
+			{
+				"type": "Stage speed",
+				"value": 7,
+				"desc": "Increases healing speed"
 			}
 		]
 	},
@@ -550,8 +775,14 @@
 		"description": "Purges all chemicals at a fast rate from the bloodstream",
 		"threshold": [
 			{
-				"resistance": 7,
-				"stagespeed": 6
+				"type": "Resistance",
+				"value": 7,
+				"desc": "Increases chem removal speed"
+			},
+			{
+				"type": "Stage speed",
+				"value": 6,
+				"desc": "Consumed chemicals nourish the host"
 			}
 		]
 	},
@@ -585,9 +816,19 @@
 		"description": "Changes the voice of the affected mob. Causing confusion in communication. Available in Virus Crates.",
 		"threshold": [
 			{
-				"stealth": 3,
-				"stagespeed": 7,
-				"transmission": 14
+				"type": "Stealth",
+				"value": 3,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Stage speed",
+				"value": 7,
+				"desc": "Changes voice more often"
+			},
+			{
+				"type": "Transmission",
+				"value": 14,
+				"desc": "The host's language center of the brain is damaged, leading to complete inability to speak or understand any language, until cured."
 			}
 		]
 	},
@@ -601,9 +842,19 @@
 		"description": "Forces the affected mob to vomit! Makes the affected mob lose nutrition and heal toxin damage.",
 		"threshold": [
 			{
-				"stealth": 4,
-				"resistance": 7,
-				"transmission": 7
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom remains hidden until active"
+			},
+			{
+				"type": "Resistance",
+				"value": 7,
+				"desc": "Host will vomit blood, causing internal damage"
+			},
+			{
+				"type": "Transmission",
+				"value": 7,
+				"desc": "Host will projectile vomit, increasing vomiting range"
 			}
 		]
 	},
@@ -617,7 +868,9 @@
 		"description": "The virus mutates the host's metabolism, making it almost unable to gain nutrition from food.",
 		"threshold": [
 			{
-				"stealth": 4
+				"type": "Stealth",
+				"value": 4,
+				"desc": "The symptom is less noticeable"
 			}
 		]
 	}

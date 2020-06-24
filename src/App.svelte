@@ -8,12 +8,9 @@
   import { Col, Row, Container, Alert } from "sveltestrap";
 
   let visible = true;
-  
 </script>
 
 <style>
-
-
   .alertBox {
     margin: 5px;
   }
@@ -78,9 +75,6 @@
       <div class="col-sm">
         Todo list:
         <ul>
-          <li>Thresholds in totals</li>
-          <li>Thresholds in symptom list</li>
-          <li>Threshold descriptions</li>
           <li>Import / Export save lists</li>
           <li>Live symptom value editor</li>
         </ul>

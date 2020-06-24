@@ -16,6 +16,7 @@
   function clear() {
     makeRequest({ operation: "clear" });
     v_saves.set(false);
+    open = false;
   }
 </script>
 

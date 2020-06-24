@@ -22,7 +22,6 @@
   });
 
   var myFunction = function() {
-    console.log("sort updated");
     sorted++;
   };
 

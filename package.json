@@ -15,7 +15,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "deploy": "firebase deploy"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
@@ -34,6 +35,7 @@
     "sirv-cli": "^0.4.4",
     "surge": "^0.21.3",
     "svelte-tablesort": "^1.1.0",
+    "svelte-tooltip": "^1.2.0",
     "sveltestrap": "^3.3.0"
   }
 }

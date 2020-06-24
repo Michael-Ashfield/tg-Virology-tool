@@ -12,6 +12,7 @@
   let tot_resistance = 0;
   let tot_stagespeed = 0;
   let tot_transmission = 0;
+  let thres = [];
 
   let cureList = [
     "Copper, Silver, Iodine, Iron, Carbon",
@@ -40,16 +41,19 @@
 
   let cure = cureList[0];
   let chemical = [];
-  let infection = infectionList[3];
+  let infection = "";
 
   $: {
+    // Zero values
     tot_stealth = 0;
     tot_resistance = 0;
     tot_stagespeed = 0;
     tot_transmission = 0;
     cure = cureList[0];
     chemical = [];
-    infection = infectionList[3];
+    thres = [];
+    infection = "";
+
     v_curr.forEach(virus => {
       tot_stealth += virus.stealth;
       tot_resistance += virus.resistance;
@@ -137,6 +141,29 @@
       stage_speed: tot_stagespeed,
       transmission: tot_transmission
     });
+
+    // Now will finalised totals
+    v_curr.forEach(virus => {
+      if (virus.threshold.length > 0) {
+        virus.threshold.forEach(virusThres => {
+          virusThres.symptom = virus.symptom;
+          switch (virusThres.type) {
+            case "Stealth":
+              tot_stealth >= virusThres.value && thres.push(virusThres);
+              break;
+            case "Resistance":
+              tot_resistance >= virusThres.value && thres.push(virusThres);
+              break;
+            case "Stage speed":
+              tot_stagespeed >= virusThres.value && thres.push(virusThres);
+              break;
+            case "Transmission":
+              tot_transmission >= virusThres.value && thres.push(virusThres);
+              break;
+          }
+        });
+      }
+    });
   }
 
   function check_unique(chem_item) {
@@ -146,52 +173,80 @@
   }
 </script>
 
+<style>
+  .desc {
+    font-size: 0.9rem;
+  }
+</style>
+
 <div class="totals">
-  <table class="table">
-    <tr>
-      <td colspan="2">
-        <Chart />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>Stealth</b>
-      </td>
-      <td>{tot_stealth}</td>
-    </tr>
-    <tr>
-      <td>
-        <b>Resistance</b>
-      </td>
-      <td>{tot_resistance}</td>
-    </tr>
-    <tr>
-      <td>
-        <b>Stage speed</b>
-      </td>
-      <td>{tot_stagespeed}</td>
-    </tr>
-    <tr>
-      <td>
-        <b>Transmission</b>
-      </td>
-      <td>{tot_transmission}</td>
-    </tr>
-    <tr>
-      <td>Chemicals required</td>
-      <td>
-        {#each chemical as chemical_item}
-          <p>{chemical_item}</p>
-        {/each}
-      </td>
-    </tr>
-    <tr>
-      <td>Possible cures</td>
-      <td>{cure}</td>
-    </tr>
-    <tr>
-      <td>Infection type</td>
-      <td>{infection}</td>
-    </tr>
+  <table class="table table-bordered table-hover">
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <Chart />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>Stealth</b>
+        </td>
+        <td>{tot_stealth}</td>
+      </tr>
+      <tr>
+        <td>
+          <b>Resistance</b>
+        </td>
+        <td>{tot_resistance}</td>
+      </tr>
+      <tr>
+        <td>
+          <b>Stage speed</b>
+        </td>
+        <td>{tot_stagespeed}</td>
+      </tr>
+      <tr>
+        <td>
+          <b>Transmission</b>
+        </td>
+        <td>{tot_transmission}</td>
+      </tr>
+      <tr>
+        <td>Chemicals required</td>
+        <td>
+          {#if v_curr.length > 0}
+            {#each chemical as chemical_item}
+              <p>{chemical_item}</p>
+            {/each}
+          {/if}
+        </td>
+      </tr>
+      <tr>
+        <td>Possible cures</td>
+        <td>
+          {#if v_curr.length > 0}{cure}{/if}
+        </td>
+      </tr>
+      <tr>
+        <td>Infection type</td>
+        <td>
+          {#if v_curr.length > 0}{infection}{/if}
+        </td>
+      </tr>
+      <tr>
+        <td>Thresholds</td>
+        <td>
+          {#if thres.length > 0}
+            {#each thres as item}
+              <p>
+                <i><b>{item.symptom}</b><br />{item.type}: {item.value}</i>
+                <br />
+                <span class="desc">{item.desc}</span>
+              </p>
+            {/each}
+          {/if}
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
