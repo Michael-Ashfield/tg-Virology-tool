@@ -65,7 +65,7 @@ function makeRequest(requestData) {
 						s1 = store.clear(); // Clears store to keep it up to date
 					}
 					s1.onsuccess = () => {
-						console.log("store cleared");
+						console.log("All saves cleared");
 					};
                     break;
                 case "delete":

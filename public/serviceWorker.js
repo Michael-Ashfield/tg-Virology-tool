@@ -1,7 +1,7 @@
 var cacheName = "v1:static";
 
 //function register() {
-console.log("registered?");
+console.log("Registering service worker");
 // during the install phase you usually want to cache static assets
 self.addEventListener("install", function(e) {
 	// once the SW is installed, go ahead and fetch the resources to make this work offline

@@ -34,7 +34,7 @@ if (navigator.onLine) {
 	console.log("Loading data");
 } else {
 	// show offline message
-	console.log("Offline no no");
+	console.log("Offline");
 }
 
 export default app;
