@@ -24,17 +24,18 @@
 </style>
 
 <div class="alertBox">
-  <Alert color="warning" isOpen={visible} toggle={() => (visible = false)}>
-    <h4 class="alert-heading text-capitalize">Work in progress</h4>
-    This tool is still a work in progress and will be updated without warning,
-    this may cause you to lose your saved diseases. You can download your own
-    stable version from
+  <Alert color="primary" isOpen={visible} toggle={() => (visible = false)}>
+    <h4 class="alert-heading text-capitalize">Get your own copy!</h4>
+    This tool has an open
+    <i>data.json</i>
+    file which contains the data for every single symptom and allows you to
+    add/remove symptoms, or to change symptom data. To change this data you need
+    to install and run the code yourself. You can download your own version from
     <a
       class="alert-link"
       href="https://github.com/Michael-Ashfield/tg-Virology-tool">
       Github
     </a>
-    .
   </Alert>
 </div>
 
@@ -63,14 +64,21 @@
   <div class="container">
     <div class="row">
       <div class="col-sm">
-        This tool was created to allow
-        <strike>gamers</strike>
-        developers to
-        <strike>powergame</strike>
-        quickly test and experient with new changes to /tg/ virology. All data
-        in this app is accessable for developers to tinker with and add to.
-        Obviously players can also use this tool to create and store their
-        favourite diseases for virology.
+        <p>
+          This tool was created to allow
+          <strike>gamers</strike>
+          developers to
+          <strike>powergame</strike>
+          quickly test and experient with new changes to /tg/ virology. All data
+          in this app is accessable for developers to tinker with and add to.
+          Obviously players can also use this tool to create and store their
+          favourite diseases for virology.
+        </p>
+        <p>
+          All data saves locally to your browser, there are no cookies in use,
+          this site can be downloaded as a progressive web app to your device.
+        </p>
+
       </div>
       <div class="col-sm">
         Todo list:
