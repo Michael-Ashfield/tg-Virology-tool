@@ -1,41 +1,54 @@
 {
-  "name": "geforce-now-gameslist",
-  "version": "1.0.0",
-  "description": "geforce-now-gameslist",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lettuceboop/geforce-now-gameslist.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lettuceboop/geforce-now-gameslist/issues"
-  },
-  "homepage": "https://github.com/lettuceboop/geforce-now-gameslist#readme",
-  "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public",
-    "deploy": "firebase deploy"
-  },
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.0",
-    "@rollup/plugin-node-resolve": "^6.0.0",
-    "rollup": "^1.20.0",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-livereload": "^1.0.0",
-    "rollup-plugin-svelte": "^5.0.3",
-    "rollup-plugin-terser": "^5.1.2",
-    "svelte": "^3.17.1"
-  },
-  "dependencies": {
-    "chart.js": "^2.9.3",
-    "lodash": "^4.17.15",
-    "now": "^16.7.3",
-    "sirv-cli": "^0.4.4",
-    "surge": "^0.21.3",
-    "svelte-tablesort": "^1.1.0",
-    "svelte-tooltip": "^1.2.0",
-    "sveltestrap": "^3.3.0"
-  }
+	"name": "geforce-now-gameslist",
+	"version": "1.0.0",
+	"description": "geforce-now-gameslist",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lettuceboop/geforce-now-gameslist.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/lettuceboop/geforce-now-gameslist/issues"
+	},
+	"homepage": "https://github.com/lettuceboop/geforce-now-gameslist#readme",
+	"env": {
+		"browser": true,
+		"node": true,
+		"jasmine": true
+	},
+	"eslintConfig": {
+		"globals": {
+			"window": true
+		}
+	},
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -c -w",
+		"start": "sirv public",
+		"deploy": "firebase deploy"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^11.0.0",
+		"@rollup/plugin-node-resolve": "^6.0.0",
+		"rollup": "^1.20.0",
+		"rollup-plugin-copy": "^3.3.0",
+		"rollup-plugin-json": "^4.0.0",
+		"rollup-plugin-livereload": "^1.0.0",
+		"rollup-plugin-svelte": "^5.0.3",
+		"rollup-plugin-terser": "^5.1.2",
+		"svelte": "^3.17.1"
+	},
+	"dependencies": {
+		"bootstrap": "^4.5.0",
+		"chart.js": "^2.9.3",
+		"jquery": "^3.5.1",
+		"lodash": "^4.17.15",
+		"now": "^16.7.3",
+		"sirv-cli": "^0.4.4",
+		"surge": "^0.21.3",
+		"svelte-tablesort": "^1.1.0",
+		"svelte-tooltip": "^1.2.0",
+		"sveltestrap": "^3.3.0"
+	}
 }

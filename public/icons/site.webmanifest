@@ -1,0 +1,21 @@
+{
+	"name": "Virology app",
+	"short_name": "ViroApp",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#267fdf",
+	"background_color": "#267fdf",
+	"description": "A simply readable Hacker News app.",
+	"icons": [
+		{
+			"src": "/icons/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/icons/android-chrome-256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

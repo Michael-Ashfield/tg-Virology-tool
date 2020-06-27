@@ -212,19 +212,21 @@
         <td>{tot_transmission}</td>
       </tr>
       <tr>
-        <td>Chemicals required</td>
+        <td>Thresholds</td>
         <td>
-          {#if v_curr.length > 0}
-            {#each chemical as chemical_item}
-              <p>{chemical_item}</p>
+          {#if thres.length > 0}
+            {#each thres as item}
+              <p>
+                <i>
+                  <b>{item.symptom}</b>
+                  <br />
+                  {item.type}: {item.value}
+                </i>
+                <br />
+                <span class="desc">{item.desc}</span>
+              </p>
             {/each}
           {/if}
-        </td>
-      </tr>
-      <tr>
-        <td>Possible cures</td>
-        <td>
-          {#if v_curr.length > 0}{cure}{/if}
         </td>
       </tr>
       <tr>
@@ -234,15 +236,18 @@
         </td>
       </tr>
       <tr>
-        <td>Thresholds</td>
+        <td>Possible cures</td>
         <td>
-          {#if thres.length > 0}
-            {#each thres as item}
-              <p>
-                <i><b>{item.symptom}</b><br />{item.type}: {item.value}</i>
-                <br />
-                <span class="desc">{item.desc}</span>
-              </p>
+          {#if v_curr.length > 0}{cure}{/if}
+        </td>
+      </tr>
+
+      <tr>
+        <td>Chemicals required</td>
+        <td>
+          {#if v_curr.length > 0}
+            {#each chemical as chemical_item}
+              <p>{chemical_item}</p>
             {/each}
           {/if}
         </td>

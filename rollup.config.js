@@ -4,7 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import json from "rollup-plugin-json";
-
+import copy from "rollup-plugin-copy";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -45,6 +45,18 @@ export default {
 
 			// generate a named export for every property of the JSON object
 			namedExports: true // Default: true
+		}),
+		copy({
+			targets: [
+				{
+					src: "node_modules/bootstrap/dist/**/*",
+					dest: "public/vendor/bootstrap"
+				},
+				{
+					src: "node_modules/jquery/dist/jquery.min.js",
+					dest: "public/vendor/jquery"
+				}
+			]
 		}),
 
 		// If you have external dependencies installed from
