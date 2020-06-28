@@ -1,17 +1,17 @@
 {
-	"name": "geforce-now-gameslist",
+	"name": "virology-app",
 	"version": "1.0.0",
-	"description": "geforce-now-gameslist",
+	"description": "An app for tg virology",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/lettuceboop/geforce-now-gameslist.git"
+		"url": "git+https://github.com/Michael-Ashfield/tg-Virology-tool.git"
 	},
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/lettuceboop/geforce-now-gameslist/issues"
+		"url": "https://github.com/Michael-Ashfield/tg-Virology-tool/issues"
 	},
-	"homepage": "https://github.com/lettuceboop/geforce-now-gameslist#readme",
+	"homepage": "https://github.com/Michael-Ashfield/tg-Virology-tool#readme",
 	"env": {
 		"browser": true,
 		"node": true,
