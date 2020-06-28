@@ -128,7 +128,7 @@
 <td>{item.resistance}</td>
 <td>{item.stagespeed}</td>
 <td>{item.transmission}</td>
-<td>
+<td class="fit">
   {#if disabledAdd}
     <button class="btn btn-primary" on:click={() => remove(item)}>
       Remove

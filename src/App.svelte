@@ -40,15 +40,18 @@
 </div>
 
 <main>
-  <Container>
+  <Container class="container-fluid">
     <Row>
       <Col xs="12">
         <SymptomList />
       </Col>
-      <Col xs="8">
+    </Row>
+    <Row>
+      <Col sm="12" md="8" mr="auto">
         <CurrList />
       </Col>
-      <Col xs="4">
+
+      <Col sm="12" md="4" >
         <Totals />
       </Col>
     </Row>

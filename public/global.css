@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -8,11 +9,12 @@ body {
 	color: #333;
 	margin: 0 auto;
 	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 a {
-	color: rgb(0,100,200);
+	color: rgb(0, 100, 200);
 	text-decoration: none;
 }
 
@@ -21,14 +23,17 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: rgb(0, 80, 160);
 }
 
 label {
 	display: block;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
 	font-family: inherit;
 	font-size: inherit;
 	padding: 0.4em;
@@ -63,3 +68,19 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+td {
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.fix-table {
+    table-layout : auto;
+}
+
+  .table td.fit,
+  .table th.fit {
+    white-space: nowrap;
+    width: 1%;
+  }
+

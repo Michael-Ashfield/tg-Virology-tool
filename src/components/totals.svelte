@@ -60,32 +60,7 @@
       tot_stagespeed += virus.stagespeed;
       tot_transmission += virus.transmission;
 
-      switch (virus.level) {
-        case 1:
-          check_unique(chemicalList[0]);
-          break;
-        case 2:
-          check_unique(chemicalList[1]);
-          break;
-        case 3:
-          check_unique(chemicalList[2]);
-          break;
-        case 4:
-          check_unique(chemicalList[3]);
-          break;
-        case 5:
-          check_unique(chemicalList[4]);
-          break;
-        case 6:
-          check_unique(chemicalList[5]);
-          break;
-        case 7:
-          check_unique(chemicalList[6]);
-          break;
-        case 8:
-          check_unique(chemicalList[7]);
-          break;
-      }
+      check_unique(chemicalList[virus.level - 1]);
     });
     switch (tot_resistance) {
       case 1:
@@ -180,7 +155,7 @@
 </style>
 
 <div class="totals">
-  <table class="table table-bordered table-hover">
+  <table class="table table-bordered">
     <tbody>
       <tr>
         <td colspan="2">
@@ -201,7 +176,11 @@
       </tr>
       <tr>
         <td>
-          <b>Stage speed</b>
+          <b>
+            Stage
+            <wbr />
+            speed
+          </b>
         </td>
         <td>{tot_stagespeed}</td>
       </tr>
@@ -211,8 +190,14 @@
         </td>
         <td>{tot_transmission}</td>
       </tr>
+    </tbody>
+  </table>
+  <table class="table table-bordered">
+    <tbody>
+      <tr class="thead-dark">
+        <th>Thresholds</th>
+      </tr>
       <tr>
-        <td>Thresholds</td>
         <td>
           {#if thres.length > 0}
             {#each thres as item}
@@ -229,25 +214,30 @@
           {/if}
         </td>
       </tr>
+      <tr class="thead-dark">
+        <th>Infection type</th>
+      </tr>
       <tr>
-        <td>Infection type</td>
         <td>
           {#if v_curr.length > 0}{infection}{/if}
         </td>
       </tr>
+      <tr class="thead-dark">
+        <th>Possible cures</th>
+      </tr>
       <tr>
-        <td>Possible cures</td>
         <td>
           {#if v_curr.length > 0}{cure}{/if}
         </td>
       </tr>
-
+      <tr class="thead-dark">
+        <th>Chemicals required</th>
+      </tr>
       <tr>
-        <td>Chemicals required</td>
         <td>
           {#if v_curr.length > 0}
             {#each chemical as chemical_item}
-              <p>{chemical_item}</p>
+              <p>{chemical_item}<wbr></p>
             {/each}
           {/if}
         </td>
