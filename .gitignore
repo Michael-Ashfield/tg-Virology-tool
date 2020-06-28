@@ -1,4 +1,7 @@
 /node_modules/
 /public/build/
+/.firebase/
+/.firebaserc
+/.firebase.json
 
 .DS_Store
