@@ -47,7 +47,7 @@
       </Col>
     </Row>
     <Row>
-      <Col sm="12" md="8" mr="auto">
+      <Col sm="12" md="8">
         <CurrList />
       </Col>
 
@@ -93,6 +93,14 @@
     </div>
     <div class="row">
       <div class="col-sm createdBy">Created by Michael Ashfield 2020 ©</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p><b>Changelog:</b></p>
+      <ul>
+        <li><i>2020-09-13: </i>Fixed narcolepsy threshold, speed become 10 and transmission became 4, was originally reversed.</li>
+      </ul>
     </div>
   </div>
 </footer>

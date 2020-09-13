@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { v_list } from "../stores.js";
-  import { TableSort } from "svelte-tablesort";
+  import { TableSort } from "./svelte-tablesort";
   import Table_Item from "../components/table_item.svelte";
 
   let data = [];

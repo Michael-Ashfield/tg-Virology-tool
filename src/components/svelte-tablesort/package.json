@@ -1,0 +1,67 @@
+{
+  "_from": "svelte-tablesort",
+  "_id": "svelte-tablesort@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-nSuXJGH1lPQfolL4xXPys/N4CCtu+ED+3X+YRuZJBRtK975vcNQYBTfpOUd+M6BHGGKSrK7iD4FTh7iCSp2eKQ==",
+  "_location": "/svelte-tablesort",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "svelte-tablesort",
+    "name": "svelte-tablesort",
+    "escapedName": "svelte-tablesort",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/svelte-tablesort/-/svelte-tablesort-1.1.0.tgz",
+  "_shasum": "7aa75333eb86d0c2ceba078c7ea3c7751b17471b",
+  "_spec": "svelte-tablesort",
+  "_where": "/Users/michaelashfield/Documents/tests/viro/viro",
+  "author": {
+    "name": "Mattias Holmlund",
+    "email": "mattias@holmlund.se",
+    "url": "https://mattias.holmlund.se"
+  },
+  "bugs": {
+    "url": "https://github.com/mattiash/svelte-tablesort/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "generator-sort": "^1.0.0"
+  },
+  "deprecated": false,
+  "description": "A Svelte 3 component that makes it possible to sort a table by clicking the headers.",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.16.6",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-livereload": "^1.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.1.0",
+    "rollup-plugin-terser": "^5.1.0",
+    "sirv-cli": "^0.4.4",
+    "svelte": "^3.6.4"
+  },
+  "homepage": "https://github.com/mattiash/svelte-tablesort#readme",
+  "license": "ISC",
+  "name": "svelte-tablesort",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattiash/svelte-tablesort.git"
+  },
+  "scripts": {
+    "autobuild": "rollup -c -w",
+    "build": "rollup -c",
+    "dev": "run-p start:dev autobuild",
+    "start": "sirv public --single",
+    "start:dev": "sirv public --single --dev"
+  },
+  "svelte": "index.js",
+  "version": "1.1.0"
+}

@@ -1,6 +1,6 @@
 <script>
   import { v_list } from "../stores.js";
-  import { TableSort } from "svelte-tablesort";
+  import { TableSort } from "./svelte-tablesort";
   import Save from "./save.svelte";
   import Table_Item from "../components/table_item.svelte";
 
