@@ -749,7 +749,7 @@
 		"stealth": 0,
 		"resistance": -1,
 		"stagespeed": 0,
-		"transmission": -1,
+		"transmission": 1,
 		"level": 6,
 		"description": "Heals brute and burn damage if the host drank water recently, or if they're wet. Heals burn damage more efficiently.",
 		"threshold": [
