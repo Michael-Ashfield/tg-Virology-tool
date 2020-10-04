@@ -21,6 +21,10 @@
   .createdBy {
     font-size: 0.8rem;
   }
+
+  li + ul {
+    padding-left: 20px;
+  }
 </style>
 
 <div class="alertBox">
@@ -51,7 +55,7 @@
         <CurrList />
       </Col>
 
-      <Col sm="12" md="4" >
+      <Col sm="12" md="4">
         <Totals />
       </Col>
     </Row>
@@ -97,10 +101,30 @@
   </div>
   <div class="row">
     <div class="col">
-      <p><b>Changelog:</b></p>
+      <p>
+        <b>Changelog:</b>
+      </p>
       <ul>
-        <li><i>2020-09-13: </i>Fixed narcolepsy threshold, speed become 10 and transmission became 4, was originally reversed.</li>
-        <li><i>2020-10-02: </i>Tissue hydration transmission changed from -1 to +1, the wiki values for the symptom was incorrect, this value has been taken from th codebase.</li>
+        <li>
+          <i>2020-09-13:</i>
+          Fixed narcolepsy threshold, speed become 10 and transmission became 4,
+          was originally reversed.
+        </li>
+        <li>
+          <i>2020-10-02:</i>
+          Tissue hydration transmission changed from -1 to +1, the wiki values
+          for the symptom was incrrect, this value has been taken from the
+          codebase.
+        </li>
+        <li>
+          <i>2020-10-04:</i>
+          Some symptom values changed based on actual code.
+          <ul>
+            <li>Radioactive Resonance stage speed changed from 0 to 2</li>
+            <li>Toxolysis stage speed changed from -2 to 2</li>
+            <li>Hallucigen stage speed changed from -2 to -3</li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
