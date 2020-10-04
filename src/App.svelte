@@ -100,6 +100,7 @@
       <p><b>Changelog:</b></p>
       <ul>
         <li><i>2020-09-13: </i>Fixed narcolepsy threshold, speed become 10 and transmission became 4, was originally reversed.</li>
+        <li><i>2020-10-02: </i>Tissue hydration transmission changed from -1 to +1, the wiki values for the symptom was incorrect, this value has been taken from th codebase.</li>
       </ul>
     </div>
   </div>

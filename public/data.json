@@ -555,7 +555,7 @@
 		"symptom": "Radioactive Resonance",
 		"stealth": -1,
 		"resistance": -2,
-		"stagespeed": 0,
+		"stagespeed": 2,
 		"transmission": -3,
 		"level": 6,
 		"description": "Heals brute, burn, and toxin damage while the host is irradiated. Higher radiation levels increase the healing speed.",
